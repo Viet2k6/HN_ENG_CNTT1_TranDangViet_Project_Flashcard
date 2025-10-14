@@ -1,0 +1,128 @@
+{
+  "users": [
+    {
+      "firstName": "Việt",
+      "lastName": "Trần Đăng",
+      "email": "trandangviet00@gmail.com",
+      "password": "12345678",
+      "confirmPassword": "12345678",
+      "id": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 10,
+      "name": "Từ Vựng IT Chuyên Sâu",
+      "description": "Technology"
+    },
+    {
+      "name": "Vocabulary for IELTS",
+      "description": "Exam Prep",
+      "id": 11
+    },
+    {
+      "name": "Con vật",
+      "description": "Animal",
+      "id": 12
+    },
+    {
+      "name": "Thể thao",
+      "description": "Sport",
+      "id": 13
+    }
+  ],
+  "vocabs": [
+    {
+      "id": 1002,
+      "word": "ubiquitous",
+      "meaning": "phổ biến rộng rãi",
+      "categoryId": 11,
+      "isLearned":false
+    },
+    {
+      "word": "cat",
+      "meaning": "con mèo",
+      "categoryId": 12,
+      "isLearned":false,
+      "id": 1003
+    },
+    {
+      "word": "dog",
+      "meaning": "con chó",
+      "categoryId": 12,
+      "isLearned":false,
+      "id": 1004
+    },
+    {
+      "word": "fish",
+      "meaning": "Con cá",
+      "categoryId": 12,
+      "isLearned":false,
+      "id": 1005
+    },
+    {
+      "word": "baseball",
+      "meaning": "bóng chày",
+      "categoryId": 13,
+      "isLearned":false,
+      "id": 1006
+    },
+    {
+      "word": "football",
+      "meaning": "bóng đá",
+      "categoryId": 13,
+      "isLearned":false,
+      "id": 1007
+    },
+    {
+      "word": "volleyball",
+      "meaning": "bóng rổ",
+      "categoryId": 13,
+      "isLearned":false,
+      "id": 1008
+    },
+    {
+      "word": "Innovation",
+      "meaning": "phát minh",
+      "categoryId": 11,
+      "isLearned":false,
+      "id": 1009
+    },
+    {
+      "word": "Literacy",
+      "meaning": "trình độ học vấn",
+      "categoryId": 11,
+      "isLearned":false,
+      "id": 1010
+    },
+    {
+      "word": "algorithm",
+      "meaning": "thuật toán",
+      "categoryId": 10,
+      "isLearned":false,
+      "id": 1011
+    },
+    {
+      "word": "application",
+      "meaning": "ứng dụng",
+      "categoryId": 10,
+      "isLearned":false,
+      "id": 1012
+    },
+    {
+      "word": "lion",
+      "meaning": "sư tử",
+      "categoryId": 12,
+      "isLearned":false,
+      "id": 1013
+    },
+    {
+      "word": "database",
+      "meaning": "cơ sở dữ liệu",
+      "categoryId": 10,
+      "isLearned":false,
+      "id": 1014
+    }
+  ],
+  "results": []
+}
