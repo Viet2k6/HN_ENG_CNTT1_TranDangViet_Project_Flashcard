@@ -3,13 +3,8 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 import { vocabApi } from "../apis/vocabApi";
 import type { Vocab, VocabFormData } from "../types/vocabTypes";
 
-// ✅ Lấy toàn bộ từ vựng
 export const getVocabs = createAsyncThunk("vocabs/get", vocabApi.getAll);
-
-// ✅ Tạo từ mới
 export const createVocab = createAsyncThunk("vocabs/create", vocabApi.create);
-
-// ✅ Cập nhật từ
 export const updateVocab = createAsyncThunk(
   "vocabs/update",
   async ({ id, data }: { id: number; data: VocabFormData }) => {
@@ -17,10 +12,7 @@ export const updateVocab = createAsyncThunk(
   }
 );
 
-// ✅ Xóa từ
 export const deleteVocab = createAsyncThunk("vocabs/delete", vocabApi.delete);
-
-// ✅ Tìm kiếm từ (chỉ theo word)
 export const searchVocabs = createAsyncThunk(
   "vocabs/search",
   async ({
@@ -31,7 +23,7 @@ export const searchVocabs = createAsyncThunk(
     categoryId?: string;
   }) => {
     const query = [
-      `word_like=${encodeURIComponent(searchTerm)}`, // ✅ chỉ tìm trong word
+      `word_like=${encodeURIComponent(searchTerm)}`, 
       categoryId ? `categoryId=${categoryId}` : "",
       `_sort=id`,
       `_order=desc`,
@@ -45,7 +37,6 @@ export const searchVocabs = createAsyncThunk(
   }
 );
 
-// ✅ Lọc từ theo danh mục (mới nhất lên đầu)
 export const filterVocabs = createAsyncThunk(
   "vocabs/filter",
   async (categoryId: number) => {
@@ -57,7 +48,6 @@ export const filterVocabs = createAsyncThunk(
   }
 );
 
-// ✅ Đánh dấu đã học
 export const markAsLearned = createAsyncThunk(
   "vocabs/markAsLearned",
   async (id: number) => {
@@ -65,7 +55,6 @@ export const markAsLearned = createAsyncThunk(
   }
 );
 
-// ✅ Lấy từ vựng phân trang
 export const getPaginatedVocabs = createAsyncThunk(
   "vocabs/getPaginated",
   async ({
@@ -83,7 +72,7 @@ export const getPaginatedVocabs = createAsyncThunk(
       `_page=${page}`,
       `_limit=${limit}`,
       categoryId ? `categoryId=${categoryId}` : "",
-      searchTerm ? `word_like=${encodeURIComponent(searchTerm)}` : "", // ✅ nếu muốn tìm chính xác
+      searchTerm ? `word_like=${encodeURIComponent(searchTerm)}` : "", 
       `_sort=id`,
       `_order=desc`,
     ]
@@ -97,7 +86,6 @@ export const getPaginatedVocabs = createAsyncThunk(
   }
 );
 
-// ✅ Lấy toàn bộ từ theo danh mục (dùng cho flashcard)
 export const getAllVocabsByCategory = createAsyncThunk(
   "vocabs/getAllByCategory",
   async (categoryId?: number | null) => {
@@ -110,7 +98,6 @@ export const getAllVocabsByCategory = createAsyncThunk(
   }
 );
 
-// ✅ State
 interface VocabState {
   list: Vocab[];
   total: number;
@@ -127,7 +114,6 @@ const initialState: VocabState = {
   error: null,
 };
 
-// ✅ Slice
 const vocabSlice = createSlice({
   name: "vocabs",
   initialState,
@@ -276,3 +262,4 @@ const vocabSlice = createSlice({
 });
 
 export default vocabSlice.reducer;
+
